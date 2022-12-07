@@ -1,0 +1,87 @@
+{{> header}}
+
+<div class="container">
+
+  <div class="content">
+
+    <h1 class="content_title" title="{{article.title}}">{{article.title}}</h1>
+
+    <div class="content_meta">
+
+      📁 <a href="/rubrics/{{catName}}">#{{article.category}}</a>
+
+      📆 {{date}}
+
+    </div>
+
+    <img class="content_headimage" src="{{article.img}}" />
+
+    <h2 class="content_description">{{{article.description}}}</h2>
+
+    <div class="content_body">   
+
+      {{{article.content}}}
+
+    </div>
+
+    <script src="https://yastatic.net/share2/share.js"></script>
+    <div class="ya-share2" data-curtain data-shape="round" data-limit="6" data-services="vkontakte,odnoklassniki,telegram,twitter,whatsapp,moimir"></div>
+
+    <hr />
+
+    <h2 class="smi24_title">Новости партнеров</h2>
+
+    <div class="smi24_block" data-smi-widget-id="47"></div>
+    <script src="https://smi24.kz/js/widget.js?id=a2873a8319881d60202e" async=""></script> 
+
+  </div>
+
+    <div class="sidebar">
+
+      <div class="widget">
+
+        <h2 class="widget_title">Последние новости</h2>
+
+        {{#each otherNews}}
+          <div class="widget_item">
+            <img class="widget_item_img" src="{{this.img}}" loading="lazy" />
+            <a class="widget_item_link" href="/articles/{{this.slug}}">{{this.title}}</a>
+          </div>
+        {{/each}}
+
+      </div>
+
+      <div class="widget">
+
+        <h2 class="widget_title">Новости спорта</h2>
+
+        <a href="https://alsport.kz/">
+          <img class="widget_img" src="/images/alsport_logo.jpg" loading="lazy" />
+        </a> 
+        <br /><hr /><br />
+        <h2 class="widget_title">Музыкальные новинки</h2>
+
+        <a href="https://nostand.art/">
+          <img class="widget_img" src="/images/nostandart_logo.jpg" loading="lazy" />
+        </a> 
+
+      </div>
+
+      <div class="widget widget-sticky">
+
+        <h2 class="widget_title">Интересные новости</h2>
+
+        {{#each bestNews}}
+          <div class="widget_item">
+            <img class="widget_item_img" src="{{this.img}}" loading="lazy" />
+            <a class="widget_item_link" href="/articles/{{this.slug}}">{{this.title}}</a>
+          </div>
+        {{/each}}
+
+      </div>
+    
+    </div>
+
+  </div>
+
+</div>

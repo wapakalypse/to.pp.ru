@@ -1,0 +1,63 @@
+{{> header}}
+
+    <div class="container">
+
+      <div class="list">
+
+        <h1 class="list_title">
+          Новости по теме "{{ catName }}"
+          {{#if currentPage}}
+            (Страница {{currentPage}})
+          {{/if}}
+        </h1>
+
+        {{#each list}}
+          <div class="list_item">
+            <a class="list_item_link" href="/articles/{{this.slug}}">
+              <img class="list_item_img" src="{{this.img}}">
+              <div class="list_item_title">{{this.title}}</div>
+            </a>
+            <span class="list_item_date">{{this.date}}</span>
+          </div>
+        {{/each}}
+
+        {{#pagination pages currentPage category}}{{/pagination}} <br />
+
+      </div>
+
+      <div class="sidebar">
+
+        <div class="widget">
+
+          <h2 class="widget_title">Новости спорта</h2>
+
+          <a href="https://alsport.kz/">
+            <img class="widget_img" src="/images/alsport_logo.jpg" loading="lazy" />
+          </a> 
+          <br /><hr /><br />
+          <h2 class="widget_title">Музыкальные новинки</h2>
+
+          <a href="https://nostand.art/">
+            <img class="widget_img" src="/images/nostandart_logo.jpg" loading="lazy" />
+          </a> 
+
+        </div>
+
+        <div class="widget widget-sticky">
+
+          <h2 class="widget_title">Интересные новости</h2>
+
+          {{#each bestNews}}
+            <div class="widget_item">
+              <img class="widget_item_img" src="{{this.img}}" loading="lazy" />
+              <a class="widget_item_link" href="/articles/{{this.slug}}">{{this.title}}</a>
+            </div>
+          {{/each}}
+
+        </div>
+      
+      </div>
+
+    </div>
+  </body>
+</html>

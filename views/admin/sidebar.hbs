@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    {{ title }} [{{currentPage}}]
+    {{#each list}}
+      <ul class="list-group" style=">
+          <li class="list-group-item">{{this.title}}</li>
+        <!--  <li class="list-group-item">{{this.description}}</li>
+          <li class="list-group-item">{{this.content}}</li>
+          <li class="list-group-item">{{this.original}}</li>
+          <li class="list-group-item">{{this.category}}</li>
+          <li class="list-group-item">{{this._id}}</li> -->
+
+          <form action="/articles/{{this.slug}}/edit" method="post" enctype="application/x-www-form-urlencoded">
+              <input type="hidden" value="DELETE" name="_method"/>
+              <button type="submit" class="btn btn-secondary"> Delete </button>
+          </form>
+
+          <a href="/articles/{{this.slug}}/edit"> Edit </a> |
+          <a href="/articles/{{this.slug}}"> Show </a>
+      </ul>
+    {{/each}}
+
+    {{#pagination articles currentPage}}{{/pagination}}
+
+  </body>
+</html>

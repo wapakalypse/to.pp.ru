@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <meta name="description" content="{{description}}" />
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="open-header">☰</div>
+    <header class="header">
+
+      <div class="close-header">×</div>
+
+      <a href="/">🏠 Главная</a>
+
+      <div class="menu">
+
+        <a href="/rubrics/politic/">💼 Политика</a>
+        <a href="/rubrics/economy/">📊 Экономика</a>
+        <a href="/rubrics/tech/">💻 Технологии</a>
+        <a href="/rubrics/science/">🔭 Наука</a>
+        <a href="/rubrics/ecology/">🌄 Экология</a>
+        <a href="/rubrics/religion/">⛪ Религия</a>
+     
+      </div>
+
+      <a href="/pages/about/">📃 О нас</a>   
+      <!-- <div class="search">
+        🔍
+      </div> -->
+    </header>
+    <script>
+      document.querySelector('.open-header').onclick = () => document.querySelector('.header').classList.add('open');
+      document.querySelector('.close-header').onclick = () => document.querySelector('.header').classList.remove('open');
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-71JTNNGEW4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-71JTNNGEW4');
+    </script>
+    <main>

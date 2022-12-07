@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+    <script src="/translate.min.js"></script>
+  </head>
+  <body>
+
+    <h1>{{ title }}</h1>
+
+    <div class="content">
+      <form method="post" name="edit">
+
+        <input name="title" type="text" placeholder="title" value="{{list.title}}"/><br /><br />
+        <input name="description" type="text" placeholder="description" value="{{list.description}}"/><br /><br />
+        <textarea name="content" type="textarea" rows="10" cols="45" />{{list.content}}</textarea><br /><br />
+        <textarea name="original" type="textarea" rows="10" cols="45" />{{list.original}}</textarea><br /><br />
+        <input name="slug" type="text" placeholder="slug" value="{{list.slug}}"/><br /><br />
+        <input name="img" type="text" placeholder="img" value="{{list.img}}"/><br /><br />
+        <input name="date" type="text" placeholder="date" value="{{list.date}}"/><br /><br />
+
+        {{#if addart}}	
+          <input name="category" type="text" placeholder="category" value="{{list.category}}"/><br /><br />
+          <input name="author" type="text" placeholder="author" value="{{list.author}}"/><br /><br />
+        {{/if}}
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+      </form>
+    </div>
+
+  </body>
+</html>

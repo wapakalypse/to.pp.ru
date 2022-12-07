@@ -1,0 +1,22 @@
+{{> sidebar}}
+    <div class="list">
+      
+      <h1 class="list_title">
+        {{ title }}
+        {{#if currentPage}}
+          (Page {{currentPage}})
+        {{/if}}
+        </h1>
+
+      <h2 class="list_subtitle">
+        <a href="/cntrl/{{link}}/add">📝 Add new</a>
+      </h2>
+
+      {{#listItems list link}}{{/listItems}}
+
+      {{#adminPagination pages currentPage}}{{/adminPagination}}
+
+    </div>
+
+  </body>
+</html>

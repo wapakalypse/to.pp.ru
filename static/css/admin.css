@@ -1,0 +1,186 @@
+@font-face {
+	font-family:'Akrobat Regular';
+	src: local('Akrobat Regular'),
+	url(/fonts/akrobat-regular.ttf);
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family:'Akrobat Bold';
+	src: local('Akrobat Bold'),
+	url(/fonts/akrobat-bold.otf);
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family:'Arimo';
+	src: local('Arimo'),
+	url(/fonts/arimo.ttf);
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    background: #eee;
+    font-family:'Arimo';
+}
+
+a {
+    color: #247fbf; 
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(147, 89, 214); 
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 7px;
+    background: #fff;
+    box-shadow: 0 5px 10px #d7d7d7;
+} 
+
+aside a {
+    margin: 0.5rem 1rem;
+} 
+
+aside ul {
+    list-style-type: none;
+} 
+
+aside ul li {
+    padding: 1rem 0;
+} 
+
+main {
+    width: 1000px;
+    margin: auto;
+    padding: 3rem 0;
+}
+
+h1,
+h2,
+h3 {
+	font-family:'Akrobat Bold';
+}
+
+h1 {
+    margin: 1rem 0;
+}
+
+.content {
+    line-height: 1.5;
+}
+
+.content p {
+    padding: .5rem 0;
+    text-align: justify;
+}
+
+.content p:first-child {
+    font-size: 14pt;
+    font-weight: 600;
+}
+
+.content div {
+    display: none;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+}
+
+.list {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    border-radius: 7px;
+    background: #fff;
+    box-shadow: 0 5px 10px #d7d7d7;
+}
+
+.list_title {
+    padding: 1rem;
+    background: #e5f1f7;
+    border-radius: 5px;
+}
+
+.list_subtitle {
+    padding: 1rem 0;
+    text-align: right;
+}
+
+.list_subtitle a {
+    color: #2e2e2e;
+}
+
+.list_item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.list_item_cat {
+    color: #444;
+    margin: 0 1rem;
+}
+
+.list_item_img {
+    width: 75px;
+    margin: 0 1rem 0 0;
+    border-radius: 5px;
+}
+
+.list_item_pub {
+    margin: 0 1rem;
+}
+
+.nav {
+    display: flex;
+    list-style-type: none;
+    margin: 1rem;
+}
+
+.nav li {
+    margin: 0.5rem;
+}
+
+.nav li a {
+    padding: 0.7rem 1rem;
+    background: #e4f1f7;
+    border-radius: 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 14pt;
+}
+
+form button {
+    padding: 0.7rem 3rem;
+    border-radius: 5px;
+    background: #80a2e1;
+    color: #fff;
+    font-size: 14pt;
+    cursor: pointer;
+}

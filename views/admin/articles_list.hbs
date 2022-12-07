@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <h1>{{ title }} [{{currentPage}}]</h1>
+    <h2><a href="/cntrl/articles/add">Add Article</a></h2>
+    {{#each list}}
+      <ul class="list-group" style=">
+          <li class="list-group-item">{{this.title}}</li>
+
+          <form action="/cntrl/articles/{{this._id}}/" method="delete" enctype="application/x-www-form-urlencoded">
+              <input type="hidden" value="DELETE" name="_method"/>
+              <button type="submit" class="btn btn-secondary"> Delete </button>
+          </form>
+
+          <a href="/cntrl/articles/delete/{{this._id}}"> Delete </a> |
+          <a href="/cntrl/articles/edit/{{this._id}}"> Edit </a> |
+          <a href="/cntrl/articles/{{this._id}}"> Show </a>
+      </ul>
+    {{/each}}
+
+    {{#pagination pages currentPage}}{{/pagination}}
+
+  </body>
+</html>

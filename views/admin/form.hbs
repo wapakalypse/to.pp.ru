@@ -1,0 +1,23 @@
+{{> sidebar}}
+
+		<h1>{{title}}</h1>
+
+		<form method="post" name="{{formMethod}}">
+
+			<p><input name="title" type="text" placeholder="title" value="{{list.title}}"/></p>
+			<p><input name="title_new" type="text" placeholder="title new" value="{{list.orig_title}}"/></p>
+			<p><input name="description" type="text" placeholder="description" value="{{list.description}}"/></p>
+			<p><textarea name="content" type="textarea" placeholder="content" rows="10" cols="45" value="{{list.content}}"/>{{list.content}}</textarea></p>
+			<p><input name="slug" type="text" placeholder="slug" value="{{list.slug}}"/></p>
+			<p><input name="img" type="text" placeholder="img" value="{{list.img}}"/></p>
+			<p><input name="date" type="text" placeholder="date" value="{{list.date}}"/></p>
+			<p><input name="category" type="text" placeholder="category" value="{{list.category}}"/></p>
+			<p><input name="pub" type="text" placeholder="publish" value="{{list.pub}}"/></p>
+
+			<button type="submit">Save</button>
+
+		</form>
+
+  </body>
+
+</html>
