@@ -150,7 +150,6 @@
     .all-main .all-item {
         float: left;
         width: 488px;
-        max-height: 49%;
         margin: 5px 3px 0;
         font-size: 14pt;
     }
